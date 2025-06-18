@@ -1,29 +1,29 @@
-/******************************************************************************
-
-19
-
-*******************************************************************************/
 import java.util.Scanner;
+
 public class ex019 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        double soma = 0, menor = Double.MAX_VALUE, maior = Double.MIN_VALUE;
+        int count = 0;
 
-        int idade = 0, idade_=200;;
-        String nome, nome_menor="";
+        System.out.println("Digite as temperaturas (digite um valor negativo para encerrar): ");
+        while (true) {
+            double temp = scanner.nextDouble();
+            if (temp < 0) break;
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("Entre com o " + i + "° nome: ");
-            nome = sc.nextLine();
-            System.out.println("Entre com a idade da " + i +"° pessoa: ");
-            idade = sc.nextInt();
-            sc.nextLine();
-            if (idade < idade_) {
-                idade_ = idade;
-                nome_menor = nome;
-            }
+            soma += temp;
+            menor = Math.min(menor, temp);
+            maior = Math.max(maior, temp);
+            count++;
         }
-        System.out.println("Nome menor idade: " + nome_menor);
-        System.out.println("Idade Menor: " + idade_);
 
+        if (count > 0) {
+            double media = soma / count;
+            System.out.println("Menor temperatura: " + menor);
+            System.out.println("Maior temperatura: " + maior);
+            System.out.println("Média das temperaturas: " + media);
+        } else {
+            System.out.println("Nenhuma temperatura válida foi digitada.");
+        }
     }
 }

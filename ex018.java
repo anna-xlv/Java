@@ -1,26 +1,27 @@
-/******************************************************************************
-
-18
-
-*******************************************************************************/
 import java.util.Scanner;
-public class ex018 {
+public class ex183004 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int idade, maior = 0, soma = 0;
-        double media = 0;
+        Scanner scan = new Scanner(System.in);
+        int n1, n2;
 
-        for (int i = 1; i <= 20; i++) {
-            System.out.println("A " + i + "° idade");
-            idade = sc.nextInt();
-            soma += idade;
-            media = soma/20;
-            if (idade >= 18) {
-                maior++;
+
+        System.out.println("Insira um numero inteiro");
+        n1 = scan.nextInt();
+        System.out.println("Insira o segundo numero inteiro:");
+        n2 = scan.nextInt();
+
+
+        if (n1 < n2) {
+            for (int i = n1; i <= n2; i++) {
+
+                System.out.println(i);
+                }
+            }
+        if (n1 > n2) {
+            for (int i = n2; i < n1; i++) {
+
+                System.out.println(i);
             }
         }
-
-
-        System.out.println("A soma entre todos as idades é equivalente a: " + soma + "\nA média das idades é igual a " + media + " \nA quantidade de pessoas maior de idade é igual a " + maior + ".");
     }
 }
