@@ -1,4 +1,4 @@
-public class pessoa {
+public class Pessoa {
     String nome;
     int idade;
     String endereco;
@@ -28,5 +28,6 @@ public class pessoa {
             this.profissao = profissao;
    }
 }
+
 
 
