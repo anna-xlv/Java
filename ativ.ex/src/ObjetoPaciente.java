@@ -63,36 +63,36 @@ public class ObjetoPaciente {
     }
 
     public static void main(String[] args) {
-        Scanner ler = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Paciente paci = new Paciente();
 
         System.out.println("Quantidade de fichas: ");
-        int ficha = ler.nextInt();
+        int ficha = sc.nextInt();
 
-        ler.nextLine();
+        sc.nextLine();
 
         for (int i = 0; i < ficha; i++ ) {
 
 
             System.out.println("\nNome do paciente: ");
-            paci.setNome(ler.nextLine());
+            paci.setNome(sc.nextLine());
             System.out.println("Gênero do paciente (F = Feminino M = Masculino O = Outros): " );
-            paci.setSexo(ler.next().charAt(0));
+            paci.setSexo(sc.next().charAt(0));
             System.out.println("Data de nascimento do paciente: ");
-            paci.setDataDeNascimento(ler.next());
+            paci.setDataDeNascimento(sc.next());
             System.out.println("CPF do paciente:");
-            paci.setcpf(ler.nextLine());
-            ler.nextLine();
+            paci.setcpf(sc.nextLine());
+            sc.nextLine();
             System.out.println("Nível de escolaridade do paciente: ");
-            paci.setNivelDeEscolaridade(ler.nextLine());
-            ler.nextLine();
+            paci.setNivelDeEscolaridade(sc.nextLine());
+            sc.nextLine();
             System.out.println("Email para contato: ");
-            paci.setEmail(ler.nextLine());
+            paci.setEmail(sc.nextLine());
             System.out.println("Telefone para contato: ");
-            paci.setTelefone(ler.nextLine());
+            paci.setTelefone(sc.nextLine());
             System.out.println("Endereço do paciente: ");
-            paci.setEndereco(ler.nextLine());
-            ler.nextLine();
+            paci.setEndereco(sc.nextLine());
+            sc.nextLine();
 
 
 
