@@ -78,37 +78,37 @@ public class ObjetoFuncionario {
     }
 
     public static void main (String [] args) {
-        Scanner ler = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Funcionario funcio = new Funcionario();
 
         System.out.println("Quantos cadastros são?");
-        int ficha = ler.nextInt();
+        int ficha = sc.nextInt();
 
-        ler.nextLine();
+        sc.nextLine();
 
         for(int i = 0; i < ficha; i++) {
 
             System.out.println("\n\nInsira seu nome: ");
-             funcio.setNome(ler.nextLine());
+             funcio.setNome(sc.nextLine());
             System.out.println("Insira seu endereço: ");
-             funcio.setEndereco(ler.nextLine());
+             funcio.setEndereco(sc.nextLine());
             System.out.println("Insira seu CPF: ");
-             funcio.setCpf(ler.nextLine());
+             funcio.setCpf(sc.nextLine());
             System.out.println("Insira seu telefone: ");
-             funcio.setTelefone(ler.nextLine());
+             funcio.setTelefone(sc.nextLine());
             System.out.println("Insira seu cargo: ");
-             funcio.setCargo(ler.nextLine());
+             funcio.setCargo(sc.nextLine());
             System.out.println("Insira sua data de admissão: ");
-             funcio.setDataDeAdmisssao(ler.nextLine());
+             funcio.setDataDeAdmisssao(sc.nextLine());
             System.out.println("Insira sua data de nascimento: ");
-             funcio.setDataDeNascimento(ler.nextLine());
+             funcio.setDataDeNascimento(sc.nextLine());
             System.out.println("Insira seu email: ");
-             funcio.setEmail(ler.nextLine());
+             funcio.setEmail(sc.nextLine());
             System.out.println("Insira seu gênero (F = Feminino M = Masculino O = Outros):");
-             funcio.setSexo(ler.next().charAt(0));
+             funcio.setSexo(sc.next().charAt(0));
             System.out.println("Insira seu nível de escolaridade: ");
-             funcio.setNivelDeEscolaridade(ler.next());
-            ler.nextLine();
+             funcio.setNivelDeEscolaridade(sc.next());
+            sc.nextLine();
 
             System.out.println("\n~~~~~~FICHA~~~~~~");
             System.out.println("Nome: "+funcio.getNome());
